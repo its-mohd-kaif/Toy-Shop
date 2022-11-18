@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import NavBar from "./Components/NavBar";
+import Signup from "./Components/Signup";
+import Signin from "./Components/Signin";
+import { Routes, Route } from "react-router-dom";
+import { createContext, useState } from "react";
+import CartPage from "./Components/CartPage";
+import About from "./Components/About";
+import Contact from "./Components/Contact";
+// noteContext Ror handling Products data
+export const noteContext = createContext();
+// textContext For handling Increase Decrease size of Text
+export const textContext = createContext();
+
+export const userContext = createContext();
 
 function App() {
+  const [data, setData] = useState([]);
+  const [text, setText] = useState("initial");
+  const [user, setUser] = useState("");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <noteContext.Provider value={{ data, setData }}>
+        <textContext.Provider value={{ text, setText }}>
+          <userContext.Provider value={{ user, setUser }}>
+            <Routes>
+              <Route path="/" element={<NavBar />} />
+              <Route path="/Signup" element={<Signup />} />
+              <Route path="/Signin" element={<Signin />} />
+              <Route path="/Cart" element={<CartPage />} />
+              <Route path="/About" element={<About />} />
+              <Route path="/Contact" element={<Contact />} />
+            </Routes>
+          </userContext.Provider>
+        </textContext.Provider>
+      </noteContext.Provider>
     </div>
   );
 }
