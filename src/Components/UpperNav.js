@@ -1,12 +1,12 @@
-import React from 'react'
-import img1 from "../images/uimg1.png"
-import img2 from "../images/uimg2.png"
-import img3 from "../images/uimg3.png"
-import "./UpperNav.css"
+import React, { memo } from "react";
+import img1 from "../images/uimg1.png";
+import img2 from "../images/uimg2.png";
+import img3 from "../images/uimg3.png";
+import "./UpperNav.css";
 function UpperNav() {
   return (
     <div>
-        {/* Carousel Container */}
+      {/* Carousel Container */}
       <div className="main-task3">
         <div id="myCarousel" className="carousel slide" data-ride="carousel">
           <ol className="carousel-indicators">
@@ -48,7 +48,7 @@ function UpperNav() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default UpperNav
+export default memo(UpperNav);

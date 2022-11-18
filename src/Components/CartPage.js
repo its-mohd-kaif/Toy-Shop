@@ -75,6 +75,7 @@ function CartPage() {
       user.setData([...user.data]);
     }
   };
+  // Checkout Button Function
   const checkOutBtn = () => {
     if (price === 0) {
       alert("Buy Some Product");
@@ -86,7 +87,7 @@ function CartPage() {
       navigate("/");
     }
   };
-
+  // Signout Button Function
   const signOutBtn = () => {
     localStorage.removeItem("username");
     alert("Signout Successfully");

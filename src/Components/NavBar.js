@@ -16,17 +16,14 @@ function NavBar() {
 
   const [login, setLogin] = useState("");
 
- 
-
-
-  useEffect(()=>{
+  useEffect(() => {
     let users = JSON.parse(localStorage.getItem("username"));
     if (users === null) {
-      setLogin("Not Login")
+      setLogin("Not Login");
     } else {
-      setLogin(users[0].username)
+      setLogin(users[0].username);
     }
-  },[]);
+  }, []);
 
   console.log("USER SIGN IN", userSignin);
 
@@ -84,7 +81,6 @@ function NavBar() {
                 <span
                   style={{
                     color: "yellow",
-                    // backgroundColor: "yellow",
                     borderRadius: "15px",
                     fontSize: "large",
                   }}
@@ -93,42 +89,25 @@ function NavBar() {
                 </span>
               </button>
             </li>
-            {/* <li>
-            <button onClick={textHandler} className="textNav btnCart">
-              <img className="textImg" src={text} alt="" />
-            </button>
-          </li> */}
-          </center>
-          {/* <li style={{ float: "right" }}>
-            <span
-              className="textNav"
-              style={{
-                color: "#fcc00e",
-                border: "1px solid yellow",
-                marginTop:"13em",
-                paddingTop:"20%"
-              }}
-            >
-              Not Logged in
-            </span>
-          </li> */}
 
-          <li style={{ float: "right" }}>
-            <button onClick={cartHandler} className="textNav btnCart">
-              <img className="cartImg1 cart" src={userImg} alt="" />{" "}
-              <span
-                style={{
-                  color: "yellow",
-                  // backgroundColor: "yellow",
-                  borderRadius: "15px",
-                  fontSize: "large",
-                  marginRight: "2em",
-                }}
-              >
-                {login}
-              </span>
-            </button>
-          </li>
+            <li className="userLi">
+              <div className="userBtn">
+                <button onClick={cartHandler} className="textNav btnCart">
+                  <img className="cartImg1 cart" src={userImg} alt="" />{" "}
+                  <span
+                    style={{
+                      color: "yellow",
+                      borderRadius: "15px",
+                      fontSize: "large",
+                      marginRight: "2em",
+                    }}
+                  >
+                    {login}
+                  </span>
+                </button>
+              </div>
+            </li>
+          </center>
         </ul>
         <Carousel />
         <Product />

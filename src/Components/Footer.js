@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { memo, useState } from "react";
 import "./Footer.css";
 import logo from "../images/logo.png";
 function Footer() {
@@ -40,7 +40,8 @@ function Footer() {
           />
 
           <p class="footer-links">
-            <a href="/">Home</a>·<a href="/About">About</a>·<a href="/Contact">Contact</a>
+            <a href="/">Home</a>·<a href="/About">About</a>·
+            <a href="/Contact">Contact</a>
           </p>
 
           <p class="footer-company-name">Toy Box © 2022</p>
@@ -73,4 +74,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default memo(Footer);

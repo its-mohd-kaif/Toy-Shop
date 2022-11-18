@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 // Import Images
 import img1 from "../images/img1.png";
 import img2 from "../images/img2.png";
@@ -53,4 +53,4 @@ function Carousel() {
   );
 }
 
-export default Carousel;
+export default memo(Carousel);

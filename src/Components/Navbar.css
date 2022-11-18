@@ -46,12 +46,15 @@ li a:hover {
 .textImg {
   width: 2.5em;
 }
-.logoImg{
+.logoImg {
   width: 4em;
 }
-.userImg{
+.userImg {
   width: 3em;
   margin-top: 2em;
+}
+.userLi {
+  float: right;
 }
 /* -------------------------------------- */
 

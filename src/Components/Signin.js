@@ -40,7 +40,7 @@ function Signin() {
     } else if (users[0].username === username && users[0].pass === pass) {
       alert("Login Successfully");
       userValue.setUser(username);
-      // Navigate to feed page
+      // Navigate to Home page
       navigate("/");
       
     }

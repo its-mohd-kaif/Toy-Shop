@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { memo, useContext, useEffect, useState } from "react";
 import "./Product.css";
 import { products } from "./Data";
 import { noteContext, textContext } from "../App";
@@ -14,8 +14,8 @@ function Product() {
   const [value, setValue] = useState("");
 
   let tempData = products;
-
-  let arr=[]
+  // when user search product so in arr we push matching products row. after we set this arr into display state
+  let arr = [];
   const typeHandler = (e) => {
     setType(e.target.value);
   };
@@ -73,7 +73,7 @@ function Product() {
 
   // -----------------------
   let user = useContext(noteContext);
-
+  // Add to cart function
   const addToCart = (e) => {
     let productId = e;
     productId = Number(productId);
@@ -172,4 +172,4 @@ function Product() {
   );
 }
 
-export default Product;
+export default memo(Product);
