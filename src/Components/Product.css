@@ -58,6 +58,10 @@
   float: left;
   margin-left: 5em;
 }
+.search-container{
+  float: right;
+  margin-right: 5em;
+}
 .searchInput {
   width: 25em;
   height: 3em;
@@ -65,18 +69,23 @@
   color: black;
   border-radius: 10px;
   padding: 2%;
+  font-size: large;
   border: 1px solid black;
 }
 ::placeholder {
   color: black;
 }
 .searchBtn {
-  padding: 6px 12px;
+  padding: 13px 20px;
   font-size: large;
   background: transparent;
   border-radius: 10px;
   margin-left: 5px;
   border: 1px solid black;
+  border-radius: 10px;
+  background-color: #e72a60;
+  color: white;
+  border: none;
 }
 select {
   height: 3em;
@@ -84,6 +93,7 @@ select {
   background: transparent;
   border-radius: 10px;
   border: 1px solid black;
+  font-size: large;
 }
 option {
   height: 3em;
@@ -178,7 +188,7 @@ option {
   border-radius: 10px;
 }
 #products1:hover {
-  box-shadow: 0 8px 16px 0 red;
+  box-shadow: 0 8px 16px 0 #ffd966;
 }
 #products1 .product1 {
   float: left;

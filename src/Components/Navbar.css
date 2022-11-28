@@ -23,8 +23,9 @@ li a {
   font-size: large;
 }
 li a:hover {
-  background-color: #fedb01;
-  color: red;
+  background-color: #e72a60;
+  color: white;
+  text-decoration: none;
 }
 .textNav {
   margin-top: 1.3em;
