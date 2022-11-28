@@ -7,7 +7,7 @@ function Contact() {
       {/* Contact Us Container */}
       <center>
         <Link style={{ marginTop: "3%" }} to="/">
-          <button className="deleteBtn">Home Page</button>
+          <button className="homeBtn">Home Page</button>
         </Link>
       </center>
       <center>

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Playfair+Display:ital@1&display=swap");
 .aboutDiv {
-  box-shadow: 0 4px 8px 0 #fd9b9b;
+  box-shadow: 0 4px 8px 0 #10497c;
   transition: 0.3s;
   width: 60%;
   padding: 3%;
@@ -17,4 +17,13 @@
   font-family: "Cedarville Cursive", cursive;
   font-family: "Playfair Display", serif;
   font-size: large;
+}
+.homeBtn{
+  background-color: #e72a60;
+  color: white;
+  font-size: large;
+  margin-top: 2%;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
 }

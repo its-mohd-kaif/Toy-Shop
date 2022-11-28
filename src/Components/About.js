@@ -8,7 +8,7 @@ function About() {
       <div>
         <center>
           <Link style={{ marginTop: "3%" }} to="/">
-            <button className="deleteBtn">Home Page</button>
+            <button className="homeBtn">Home Page</button>
           </Link>
         </center>
       </div>
